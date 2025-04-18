@@ -50,6 +50,93 @@ const dark = themeConfig.appearance.theme === 'dark'
         document.removeEventListener('animationend', removeAnimation, false)
       }
     </script>
+    
+    <!-- 添加图片查看器脚本 -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // 创建模态框元素
+        const modal = document.createElement('div');
+        modal.style.cssText = `
+          display: none;
+          position: fixed;
+          z-index: 1000;
+          padding-top: 50px;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          overflow: auto;
+          background-color: rgba(0,0,0,0.9);
+          transition: opacity 0.3s ease;
+        `;
+        document.body.appendChild(modal);
+
+        // 创建大图元素
+        const modalImg = document.createElement('img');
+        modalImg.style.cssText = `
+          display: block;
+          margin: auto;
+          max-width: 90%;
+          max-height: 90vh;
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+          animation: zoomIn 0.3s ease;
+        `;
+        modal.appendChild(modalImg);
+
+        // 创建关闭按钮
+        const closeBtn = document.createElement('span');
+        closeBtn.innerHTML = '&times;';
+        closeBtn.style.cssText = `
+          position: absolute;
+          top: 15px;
+          right: 35px;
+          color: #f1f1f1;
+          font-size: 40px;
+          font-weight: bold;
+          cursor: pointer;
+        `;
+        modal.appendChild(closeBtn);
+
+        // 添加动画样式
+        const style = document.createElement('style');
+        style.textContent = `
+          @keyframes zoomIn {
+            from {transform: scale(0.8); opacity: 0;}
+            to {transform: scale(1); opacity: 1;}
+          }
+        `;
+        document.head.appendChild(style);
+
+        // 为所有文章内的图片添加点击事件
+        const addClickToImages = () => {
+          document.querySelectorAll('.prose img').forEach(img => {
+            if (!img.hasAttribute('data-viewer-initialized')) {
+              img.setAttribute('data-viewer-initialized', 'true');
+              img.style.cursor = 'pointer';
+              img.onclick = function() {
+                modal.style.display = 'block';
+                modalImg.src = this.src;
+              }
+            }
+          });
+        };
+        
+        // 初始加载时添加点击事件
+        addClickToImages();
+        
+        // 页面内容变化时重新添加点击事件（适配Swup页面切换）
+        const observer = new MutationObserver(addClickToImages);
+        observer.observe(document.body, { childList: true, subtree: true });
+
+        // 点击关闭按钮或模态框背景关闭大图
+        closeBtn.onclick = () => modal.style.display = 'none';
+        modal.onclick = (e) => {
+          if (e.target === modal) modal.style.display = 'none';
+        };
+      });
+    </script>
+    
     <style>
       /* 页面首次加载动画 */
       html.animation-prepared .transition-swup-header,

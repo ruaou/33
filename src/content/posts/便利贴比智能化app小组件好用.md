@@ -13,7 +13,6 @@ slug: zhineng
 >**习惯的第一定律————让它显而易见**。
 
 因为手机是一个高频使用的场景。于是我就想到了利用app的一些小组件来做tips的展出。然后我的锁屏上就出现了文字，桌面上也多了各种大大的组件图标。
-![星空照片](https://image.ongz.cn/file/AgACAgUAAyEGAASfc1x7AAMGaAJlVLxTeTnKaEqq3oaYxzok8oUAArHFMRuBKBhUp03eGCyTM5kBAAMCAAN3AAM2BA.jpg)
 
 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 20px 0;">
   <img src="https://image.ongz.cn/file/AgACAgUAAyEGAASfc1x7AAMGaAJlVLxTeTnKaEqq3oaYxzok8oUAArHFMRuBKBhUp03eGCyTM5kBAAMCAAN3AAM2BA.jpg" style="max-height: 200px; width: auto;">
