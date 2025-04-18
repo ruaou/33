@@ -20,3 +20,42 @@ html {
   --at-apply: 'ease-in-out duration-300ms';
   --at-apply: 'hover:(c-background bg-primary decoration-primary)';
 }
+
+/* 博客图片容器样式 */
+.content-wrapper div[style*="display: flex"][style*="justify-content: center"][style*="gap: 10px"] {
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: center; 
+  gap: 10px; 
+  margin: 20px 0;
+}
+
+/* 图片样式 */
+.content-wrapper div[style*="display: flex"][style*="justify-content: center"][style*="gap: 10px"] img {
+  max-height: 200px; 
+  width: auto;
+  border-radius: 12px; /* 圆角 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+  opacity: 0; /* 加载时隐藏 */
+  transform: translateY(20px); /* 初始向下偏移 */
+  animation: fadeInUp 0.8s cubic-bezier(0.25, 0.8, 0.25, 1) forwards; /* 改用更自然的缓动曲线 */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* 添加放大过渡 */
+}
+
+/* 鼠标悬停效果 */
+.content-wrapper div[style*="display: flex"][style*="justify-content: center"][style*="gap: 10px"] img:hover {
+  transform: scale(1.1); /* 放大程度增强 */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2), 0 6px 12px rgba(0, 0, 0, 0.1); /* 阴影更明显 */
+}
+
+/* 加载动画关键帧 */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* 从下方滑入 */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* 到达原位 */
+  }
+}
