@@ -13,6 +13,7 @@ slug: zhineng
 >**习惯的第一定律————让它显而易见**。
 
 因为手机是一个高频使用的场景。于是我就想到了利用app的一些小组件来做tips的展出。然后我的锁屏上就出现了文字，桌面上也多了各种大大的组件图标。
+![星空照片](https://image.ongz.cn/file/AgACAgUAAyEGAASfc1x7AAMGaAJlVLxTeTnKaEqq3oaYxzok8oUAArHFMRuBKBhUp03eGCyTM5kBAAMCAAN3AAM2BA.jpg)
 
 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 20px 0;">
   <img src="https://image.ongz.cn/file/AgACAgUAAyEGAASfc1x7AAMGaAJlVLxTeTnKaEqq3oaYxzok8oUAArHFMRuBKBhUp03eGCyTM5kBAAMCAAN3AAM2BA.jpg" style="max-height: 200px; width: auto;">
@@ -48,7 +49,7 @@ slug: zhineng
 ### 重要说明
 注意：没有否认**智能小组件**的意思，相反**智能小组件的功能意义远远大于tips的意义。**
 
-## 实用建议
+### 实用建议
 最后tips：《原子习惯》指出，有效提示必须包含「具体行动指令+场景关联」。例如「10点开会」是信息型提示，而「现在立刻站起来喝水」是行动型提示。
 
 最后的最后tips：便利贴如果不看说明书，就会跟我一样，翘边，掉落！！！准备投诉商家的时候发现了便利贴的正确用法
