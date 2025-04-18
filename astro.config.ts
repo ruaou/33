@@ -7,6 +7,8 @@ import rehypeKatex from 'rehype-katex'
 import remarkMath from 'remark-math'
 import UnoCSS from 'unocss/astro'
 import { themeConfig } from './src/.config'
+// 导入自定义图片处理插件
+import remarkImageGroup from './src/plugins/remark-image-group.mjs'
 
 // https://astro.build/config
 export default defineConfig({
@@ -16,6 +18,7 @@ export default defineConfig({
   markdown: {
     remarkPlugins: [
       remarkMath,
+      remarkImageGroup, // 添加自定义图片处理插件
     ],
     rehypePlugins: [
       rehypeKatex,
