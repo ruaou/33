@@ -3,4 +3,5 @@ title: 关于
 pubDate: 2024-12-06
 ---
 
-此主题系 Hexo 主题 <a href="https://github.com/sumimakito/hexo-theme-typography">活版印字</a> 在 Astro 平台上的移植版本
+我们所知的只是沧海一粟，我们所不知道的是一整片海洋。
+过去，现在和未来的不同，不过是个顽固持久的幻觉
